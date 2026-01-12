@@ -19,6 +19,10 @@ body { font-family: 'Inter', sans-serif; color: #333; scroll-behavior: smooth; b
 /* ================= SECTIONS FADE IN ON SCROLL ================= */
 section { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
 section.visible { opacity: 1; transform: translateY(0); }
+.education-video-section {
+    opacity: 1 !important; 
+    transform: none !important;
+}
 
 /* HEADER */
 header {
@@ -518,16 +522,12 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
 
 .education-bg-video {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    inset: 0;
     width: 100%;
-    height: auto;              /* preserve landscape ratio */
-    object-fit: contain;       /* DO NOT crop */
-    transform: translate(-50%, -50%);
-    background-color: #000;    /* fill empty space if needed */
-}
-    z-index: -1; /* behind content */
-    pointer-events: none; /* don’t interfere with scrolling/text */
+    height: 100%;
+    object-fit: cover; /* landscape full width */
+    z-index: 0;
+    pointer-events: none;
 }
 
 .education-content {
@@ -550,7 +550,7 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
 .education-content .timeline .timeline-item p {
     color: #fff;
 }
-    /* ===== EDUCATION VIDEO SECTION ===== */
+  /* ===== EDUCATION VIDEO SECTION ===== */
 .education-video-section {
     position: relative;
     min-height: 70vh;
@@ -558,9 +558,12 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
     align-items: center;
     justify-content: center;
     overflow: hidden;
+
+    /* IMPORTANT: override fade-in bug */
+    opacity: 1 !important;
+    transform: none !important;
 }
 
-/* Dark overlay for readability */
 .education-overlay {
     position: absolute;
     inset: 0;
@@ -568,7 +571,6 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
     z-index: 1;
 }
 
-/* Content container */
 .education-content {
     position: relative;
     z-index: 2;
@@ -578,7 +580,6 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
     max-width: 900px;
 }
 
-/* Section title */
 .education-title {
     font-size: 48px;
     font-weight: 700;
@@ -586,7 +587,6 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
     color: #ffd600;
 }
 
-/* Education card */
 .education-card {
     background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(6px);
@@ -594,24 +594,6 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
     border-radius: 16px;
     display: inline-block;
 }
-
-.education-card h3 {
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.education-degree {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 6px;
-}
-
-.education-meta {
-    font-size: 16px;
-    opacity: 0.85;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
     .education-title {
