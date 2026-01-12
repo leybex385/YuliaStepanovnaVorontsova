@@ -122,40 +122,40 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
     position: relative;
     display: flex;
     align-items: center;
-    height: 300px; /* smaller height so it’s not huge */
+    height: 400px; /* taller so images are bigger */
     max-width: 1200px;
     margin: 40px auto;
-    border: 2px solid #0a4da2;
+    border: none; /* removed the border */
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12); /* optional: soft shadow */
 }
 
 .feature-slider .slides {
     display: flex;
     flex-direction: column; /* stack images vertically */
-    gap: 5px;
+    gap: 10px; /* a bit more spacing between images */
     width: auto;
     flex-shrink: 0;
 }
 
 .feature-slider .slides img {
-    width: 200px; /* make images smaller */
-    height: 90px; /* uniform height */
+    width: 250px; /* bigger images */
+    height: 150px; /* taller */
     object-fit: cover;
     border-radius: 8px;
 }
 
 .feature-overlay {
     position: absolute;
-    left: 220px; /* push overlay to the right of the images */
+    left: 270px; /* move overlay right so bigger images fit */
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0,0,0,0.4);
-    padding: 20px 30px;
+    padding: 25px 35px;
     border-radius: 12px;
     color: white;
-    max-width: 900px;
+    max-width: 850px;
 }
 </style>
 </head>
