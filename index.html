@@ -5,12 +5,6 @@
     <title>Yulia Vorontsova | International Business & Logistics</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Open Graph Preview -->
-    <meta property="og:title" content="Yulia Vorontsova | International Business Leader">
-    <meta property="og:description" content="Shareholder of BEST WAY GROUP INC. Specialist in international trade, logistics, and cross-border strategy.">
-    <meta property="og:image" content="preview.jpg">
-    <meta property="og:type" content="website">
-
     <style>
         body {
             margin: 0;
@@ -20,27 +14,80 @@
             line-height: 1.6;
         }
 
-        header {
-            background: #0b1c2d;
+        /* ===== NAV BAR ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background: rgba(10, 20, 30, 0.75);
+            backdrop-filter: blur(6px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 60px;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+
+        nav .logo {
             color: #fff;
-            padding: 80px 20px;
-            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 28px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: #d6d6d6;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 0.3px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffffff;
+        }
+
+        /* ===== HERO ===== */
+        header {
+            background: linear-gradient(
+                rgba(0,0,0,0.55),
+                rgba(0,0,0,0.55)
+            ), url("hero.jpg") center / cover no-repeat;
+            color: #fff;
+            padding: 160px 20px 120px;
+        }
+
+        header .hero-inner {
+            max-width: 1100px;
+            margin: auto;
         }
 
         header h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
+            font-size: 46px;
+            margin-bottom: 15px;
         }
 
         header p {
             font-size: 18px;
+            max-width: 600px;
             opacity: 0.9;
         }
 
         section {
             max-width: 1100px;
             margin: auto;
-            padding: 70px 20px;
+            padding: 80px 20px;
         }
 
         h2 {
@@ -85,127 +132,74 @@
             padding: 40px 20px;
             font-size: 14px;
         }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            nav {
+                padding: 0 20px;
+            }
+
+            nav ul {
+                gap: 16px;
+            }
+
+            header h1 {
+                font-size: 34px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
+<!-- ===== NAVIGATION ===== -->
+<nav>
+    <div class="logo">Yulia A. Vorontsova</div>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#focus">Professional Focus</a></li>
+        <li><a href="#investment">Investment</a></li>
+        <li><a href="#company">Company</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#markets">Markets</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- ===== HERO ===== -->
 <header>
-    <h1>Yulia Stepanovna Vorontsova</h1>
-    <p>International Business Leader · Logistics & Trade · Strategy & Growth</p>
+    <div class="hero-inner">
+        <h1>Founder & Shareholder</h1>
+        <p>
+            Focused on international trade, logistics operations,
+            regulatory compliance, and long-term strategic growth.
+        </p>
+    </div>
 </header>
 
-<section>
-    <h2>Personal Profile</h2>
+<!-- ===== ABOUT ===== -->
+<section id="about">
+    <h2>About</h2>
     <p class="sub">
-        A poised, strategic, and globally experienced businesswoman with a background in international trade,
-        logistics operations, and cross-border investment.
+        An internationally experienced business leader with a background
+        in cross-border trade, logistics, and strategic investment.
     </p>
-
-    <div class="grid">
-        <div class="card">
-            <strong>Age:</strong> 37<br>
-            <strong>Nationality:</strong> United States (Russian ancestry)<br>
-            <strong>Location:</strong> Greater Los Angeles Area<br>
-            <strong>Zodiac:</strong> Pisces
-        </div>
-
-        <div class="card">
-            <strong>Height:</strong> 170 cm / 5’7”<br>
-            <strong>Weight:</strong> 121 lbs<br>
-            <strong>Blood Type:</strong> A<br>
-            <strong>Religion:</strong> Eastern Orthodox Christianity
-        </div>
-
-        <div class="card">
-            <strong>Languages:</strong> English, Russian, Chinese<br>
-            <strong>Marital Status:</strong> Divorced<br>
-            <strong>Lucky Number:</strong> 16
-        </div>
-    </div>
 </section>
 
-<section>
-    <h2>Education</h2>
-    <p class="sub">A solid academic foundation supporting international vision and execution.</p>
-
-    <div class="grid">
-        <div class="card">
-            <h3>University of Hong Kong</h3>
-            <p>MBA – Business Administration & Financial Economics</p>
-            <p>2005 – 2009</p>
-        </div>
-
-        <div class="card">
-            <h3>Sibelius Upper Secondary School</h3>
-            <p>Helsinki, Finland</p>
-            <p>2001 – 2005</p>
-        </div>
-
-        <div class="card">
-            <h3>Early Education</h3>
-            <p>Primary & Middle School in Helsinki, Finland</p>
-        </div>
-    </div>
-</section>
-
-<section>
-    <h2>Career & Company</h2>
-    <p class="sub">
-        From entrepreneurship in international trade to leadership in U.S.–China logistics.
-    </p>
-
+<!-- ===== COMPANY ===== -->
+<section id="company">
+    <h2>Company</h2>
     <div class="grid">
         <div class="card">
             <h3>BEST WAY GROUP INC</h3>
             <p>
-                Shareholder & Executive Management<br>
-                China–U.S. Logistics · 3PL · Cross-Border E-commerce
-            </p>
-            <p>
-                Core responsibilities include strategy planning, growth execution,
-                KPI oversight, and partner negotiations.
+                Independent international freight forwarding and 3PL company
+                specializing in China–U.S. logistics.
             </p>
         </div>
-
         <div class="card">
             <div class="image-box">Logistics / Warehouse Image</div>
         </div>
-    </div>
-</section>
-
-<section>
-    <h2>Lifestyle & Interests</h2>
-    <p class="sub">A balanced life combining discipline, exploration, and reflection.</p>
-
-    <div class="grid">
-        <div class="card">
-            <div class="image-box">Scuba Diving Image</div>
-            <p>Scuba Diving – Similan Islands, Phuket</p>
-        </div>
-
-        <div class="card">
-            <div class="image-box">Yoga Image</div>
-            <p>Yoga – Mind & Body Balance</p>
-        </div>
-
-        <div class="card">
-            <div class="image-box">Hiking Image</div>
-            <p>Hiking – Yosemite National Park</p>
-        </div>
-    </div>
-</section>
-
-<section>
-    <h2>Charity & Values</h2>
-    <p class="sub">
-        Committed to giving back through education support, environmental protection,
-        and community welfare initiatives.
-    </p>
-
-    <div class="card">
-        I donate 10% of my profits to charitable organizations and actively participate
-        in community service programs in Los Angeles.
     </div>
 </section>
 
