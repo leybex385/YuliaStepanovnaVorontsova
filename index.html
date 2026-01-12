@@ -245,26 +245,99 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
     color: #333;
     padding: 0 12px 12px;
 }
-    .hero-content h1 {
-    font-size: 56px; /* larger for prominence */
+    /* ===== HERO SPLIT FIX ===== */
+.hero-split {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 80px 50px;
+    min-height: 90vh;
+    background-color: #ffffff; /* white background for contrast */
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 650px;
+}
+
+.hero-content h1 {
+    font-size: 56px;
     font-weight: 700;
-    margin-bottom: 12px;
-    color: #fff;
+    color: #0a4da2; /* professional dark blue */
+    margin-bottom: 16px;
 }
 
 .hero-subtitle {
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 500;
-    color: #ffd600; /* accent color */
+    color: #333; /* dark gray for visibility */
     margin-bottom: 20px;
 }
 
 .hero-description {
     font-size: 20px;
     line-height: 1.6;
-    max-width: 600px;
-    margin: auto;
-    color: #eee; /* elegant, subtle contrast */
+    color: #444; /* readable dark gray */
+    margin-top: 12px;
+}
+
+.hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hero-image-container img {
+    width: 100%;
+    max-width: 650px; /* large image */
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 1024px) {
+    .hero-split {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .hero-image-container {
+        margin-top: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .hero-subtitle {
+        font-size: 22px;
+    }
+
+    .hero-description {
+        font-size: 18px;
+    }
+
+    .hero-image-container img {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
 }
 
 </style>
@@ -287,20 +360,20 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
 </header>
 <!-- HERO SECTION -->
 <!-- HERO SECTION -->
+<!-- HERO SPLIT -->
 <section class="hero-split">
- <div class="hero-content">
+  <div class="hero-content">
     <h1>Yulia Stepanovna Vorontsova</h1>
     <p class="hero-subtitle">Shareholder & Executive, BEST WAY GROUP INC</p>
     <p class="hero-description">
-        Yulia Stepanovna Vorontsova serves as a shareholder and executive at <strong>BEST WAY GROUP INC (Sino-US Logistics Group)</strong>, 
-        providing strategic oversight and leadership for the company’s operations in the United States. 
-        Under her guidance, BEST WAY GROUP INC delivers compliant, efficient, and innovative logistics solutions across international supply chains.
+      Yulia Stepanovna Vorontsova provides strategic leadership and executive oversight for BEST WAY GROUP INC (Sino‑US Logistics Group). Her leadership ensures the delivery of compliant, efficient, and innovative logistics solutions across global supply chains.
     </p>
-</div>
+  </div>
   <div class="hero-image-container">
     <img src="images/owner.jpg" alt="Yulia Stepanovna Vorontsova">
   </div>
 </section>
+
 
 <!-- ABOUT -->
 <section id="about">
