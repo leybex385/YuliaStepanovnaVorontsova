@@ -339,7 +339,50 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
         font-size: 16px;
     }
 }
+/* CAREER SECTION SPLIT */
+.career-split {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px;
+    padding-top: 40px;
+}
 
+.career-content {
+    flex: 1;
+}
+
+.career-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.career-image img {
+    width: 100%;
+    max-width: 500px; /* adjust image size */
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .career-split {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .career-image {
+        margin-top: 30px;
+        justify-content: center;
+    }
+
+    .career-image img {
+        max-width: 80%;
+    }
+}
 </style>
 </head>
 <body>
@@ -408,32 +451,42 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
 
 <!-- CAREER -->
 <section id="career">
-    <h2 class="section-title">Professional Role</h2>
-    <p><strong>Shareholder & Active Management Participant</strong></p>
-    <h3>Daily Work Overview</h3>
-    <ul>
-        <li>Reviewing KPIs</li>
-        <li>Holding cross-department meetings</li>
-        <li>Approving strategic decisions</li>
-    </ul>
+  <div class="career-split">
+    <div class="career-content">
+      <h2 class="section-title">Professional Role</h2>
+      <p><strong>Shareholder & Active Management Participant</strong></p>
 
-    <h3>Core Focus</h3>
-    <ul>
-        <li>Growth & Revenue</li>
-        <li>Customer Satisfaction & Retention</li>
-        <li>Strategy & Innovation</li>
-    </ul>
+      <h3>Daily Work Overview</h3>
+      <ul>
+          <li>Reviewing KPIs</li>
+          <li>Holding cross-department meetings</li>
+          <li>Approving strategic decisions</li>
+      </ul>
 
-    <h3>Key Responsibilities</h3>
-    <ul>
-        <li>Strategic planning</li>
-        <li>Team leadership</li>
-        <li>Partner negotiations</li>
-        <li>Performance optimization</li>
-    </ul>
+      <h3>Core Focus</h3>
+      <ul>
+          <li>Growth & Revenue</li>
+          <li>Customer Satisfaction & Retention</li>
+          <li>Strategy & Innovation</li>
+      </ul>
 
-    <h3>Role Summary</h3>
-    <p>I act as the company’s growth engine and chief problem solver—combining strategy, leadership, and resilience to drive BEST WAY GROUP INC forward.</p>
+      <h3>Key Responsibilities</h3>
+      <ul>
+          <li>Strategic planning</li>
+          <li>Team leadership</li>
+          <li>Partner negotiations</li>
+          <li>Performance optimization</li>
+      </ul>
+
+      <h3>Role Summary</h3>
+      <p>
+        Yulia Stepanovna Vorontsova acts as the company’s growth engine and strategic problem solver—driving BEST WAY GROUP INC forward with leadership, vision, and operational excellence.
+      </p>
+    </div>
+    <div class="career-image">
+      <img src="images/owner2.jpg" alt="Yulia Stepanovna Vorontsova">
+    </div>
+  </div>
 </section>
 
 <!-- EDUCATION -->
