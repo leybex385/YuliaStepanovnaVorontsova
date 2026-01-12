@@ -608,6 +608,87 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
         font-size: 18px;
     }
 }
+    /* ================= COMPANY SECTION ================= */
+.company-section {
+    background-color: #f5f7fa;  /* subtle light gray */
+    padding: 80px 50px;
+    border-radius: 18px;
+    max-width: 1200px;
+    margin: 60px auto;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+}
+
+.company-section h2.section-title {
+    text-align: center;
+    color: #0a4da2;
+    margin-bottom: 50px;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.company-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.company-card {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 25px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    min-width: 250px;
+    max-width: 350px;
+}
+
+.company-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.company-card i {
+    font-size: 36px;
+    color: #0a4da2;
+    flex-shrink: 0;
+}
+
+.company-details h3 {
+    font-size: 20px;
+    color: #0a4da2;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.company-details p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.company-details a {
+    color: #0a4da2;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.company-details a:hover {
+    color: #ffd600; /* gold hover to match branding */
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .company-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 </style>
 </head>
 <body>
@@ -744,11 +825,31 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
 </section>
 
 <!-- COMPANY INFO -->
-<section id="company">
-    <h2 class="section-title">Company Information</h2>
-    <p><strong>Founder & Chairman:</strong> Xie Shaohua</p>
-    <p><strong>Address:</strong> 343 N Baldwin Park Blvd, City of Industry, CA 91746</p>
-    <p><strong>Website:</strong> <a href="http://www.bestwayltl.com" target="_blank">bestwayltl.com</a></p>
+<section id="company" class="company-section">
+  <h2 class="section-title">Company Information</h2>
+  <div class="company-cards">
+    <div class="company-card">
+      <i class="fas fa-user-tie"></i>
+      <div class="company-details">
+        <h3>Founder & Chairman</h3>
+        <p>Xie Shaohua</p>
+      </div>
+    </div>
+    <div class="company-card">
+      <i class="fas fa-map-marker-alt"></i>
+      <div class="company-details">
+        <h3>Address</h3>
+        <p>343 N Baldwin Park Blvd, City of Industry, CA 91746</p>
+      </div>
+    </div>
+    <div class="company-card">
+      <i class="fas fa-globe"></i>
+      <div class="company-details">
+        <h3>Website</h3>
+        <p><a href="http://www.bestwayltl.com" target="_blank">bestwayltl.com</a></p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- CONTACT -->
