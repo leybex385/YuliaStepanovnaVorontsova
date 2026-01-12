@@ -118,44 +118,28 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
     nav a:hover { color: #ffd600; }
     header { justify-content: space-between; padding: 18px 20px; }
 }
-  .feature-slider {
-    position: relative;
-    width: 100%;
-    height: 90vh; /* almost full screen height */
-    max-height: 1080px; /* optional max height */
-    margin: 40px auto;
-    overflow: hidden;
-    border-radius: 12px;
-}
-
-.feature-slider .slides {
+  .feature-image {
     display: flex;
-    width: 300%; /* 3 images side by side */
-    height: 100%;
-    transition: transform 1s ease-in-out;
+    align-items: flex-start; /* align image to top */
+    gap: 20px; /* space between image and text */
+    max-width: 1200px;
+    margin: 40px auto;
 }
 
-.feature-slider .slide {
-    flex: 0 0 100%; /* each slide takes full container width */
-    height: 100%;
-}
-
-.feature-slider .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* scale image to fill container */
+.feature-image .single-image {
+    width: 300px; /* smaller size */
+    height: auto;
+    border-radius: 12px; /* slightly rounded edges */
+    object-fit: cover;
 }
 
 .feature-overlay {
-    position: absolute;
-    left: 50px;
-    top: 50%;
-    transform: translateY(-50%);
+    flex: 1; /* text takes remaining space */
     background-color: rgba(0,0,0,0.4);
-    padding: 30px 40px;
+    padding: 25px 35px;
     border-radius: 12px;
     color: white;
-    max-width: 600px;
+    max-width: 800px;
 }
 </style>
 </head>
@@ -193,12 +177,8 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
 
 <!-- ABOUT -->
 <section id="about">
-  <div class="feature-slider">
-    <div class="slides">
-      <img src="images/bestway2.jpg" alt="Bestway">
-      <img src="images/company.jpg" alt="Company 1">
-      <img src="images/company2.jpg" alt="Company 2">
-    </div>
+  <div class="feature-image">
+    <img src="images/bestway2.jpg" alt="Bestway" class="single-image">
     <div class="feature-overlay">
       <h2>About BEST WAY GROUP INC</h2>
       <p>BEST WAY GROUP INC is an independent private international freight forwarding and 3PL company, specializing in China–U.S. logistics and cross-border e-commerce solutions. Founded by Xie Shaohua, the company delivers reliable, compliant, and efficient logistics services to global clients.</p>
@@ -293,17 +273,6 @@ function showSlides() {
 
 showSlides();
 </script>
-    <script>
-let currentIndex = 0;
-const slidesContainer = document.querySelector('.feature-slider .slides');
-const totalSlides = document.querySelectorAll('.feature-slider .slide').length;
 
-function showNextSlide() {
-    currentIndex = (currentIndex + 1) % totalSlides;
-    slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
-
-setInterval(showNextSlide, 4000); // slide every 4 seconds
-</script>
 </body>
 </html>
