@@ -118,26 +118,29 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
     nav a:hover { color: #ffd600; }
     header { justify-content: space-between; padding: 18px 20px; }
 }
-    .feature-image {
+   .feature-image {
     position: relative;
-    background-image: url('images/bestway.jpg'); /* replace with your actual image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 400px; /* adjust height as needed */
+    background-image: url('images/bestway.jpg'); /* your image */
+    background-size: cover;            /* fill the section */
+    background-position: top left;     /* focus on top-left corner */
+    height: 400px;                     /* adjust height as needed */
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    text-align: center;
     margin-bottom: 40px;
+
+    border: 2px solid #0a4da2;        /* blue border */
+    border-radius: 12px;               /* rounded corners */
+    overflow: hidden;                  /* keep image & overlay inside border */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12); /* soft shadow for depth */
 }
 
 .feature-overlay {
-    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+    background-color: rgba(0,0,0,0.4); /* slightly transparent overlay */
     padding: 40px 20px;
-    border-radius: 12px;
+    border-radius: 12px;               /* match the image border */
     max-width: 900px;
+    text-align: center;
 }
 
 .feature-overlay h2 {
