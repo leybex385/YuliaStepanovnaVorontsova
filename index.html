@@ -1,216 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Yulia Vorontsova | International Business & Logistics</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<title>Yulia Vorontsova | BEST WAY GROUP INC</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Open Graph Preview -->
-    <meta property="og:title" content="Yulia Vorontsova | International Business Leader">
-    <meta property="og:description" content="Shareholder of BEST WAY GROUP INC. Specialist in international trade, logistics, and cross-border strategy.">
-    <meta property="og:image" content="preview.jpg">
-    <meta property="og:type" content="website">
+<style>
+  /* Reset */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-    <style>
-        body {
-            margin: 0;
-            font-family: "Segoe UI", Arial, sans-serif;
-            color: #222;
-            background: #f7f8fa;
-            line-height: 1.6;
-        }
+  /* Base styles */
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f9fa;
+    color: #222;
+    line-height: 1.5;
+    padding-top: 72px; /* navbar height */
+  }
 
-        header {
-            background: #0b1c2d;
-            color: #fff;
-            padding: 80px 20px;
-            text-align: center;
-        }
+  /* Navbar */
+  nav.navbar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 72px;
+    background: rgba(12, 18, 26, 0.9);
+    backdrop-filter: saturate(180%) blur(15px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 64px;
+    z-index: 9999;
+  }
+  nav.navbar .name {
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  nav.navbar ul {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+  nav.navbar ul li a {
+    color: #cfd6dc;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.25s ease;
+  }
+  nav.navbar ul li a:hover,
+  nav.navbar ul li a:focus {
+    color: #fff;
+  }
 
-        header h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
+  /* Hero */
+  .hero {
+    min-height: 60vh;
+    background:
+      linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('hero.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    padding: 0 24px;
+  }
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.1;
+  }
+  .hero p {
+    font-size: 1.25rem;
+    margin-top: 12px;
+    max-width: 700px;
+    opacity: 0.85;
+  }
 
-        header p {
-            font-size: 18px;
-            opacity: 0.9;
-        }
+  /* Main content */
+  main {
+    max-width: 960px;
+    margin: 40px auto 80px;
+    padding: 0 24px;
+  }
 
-        section {
-            max-width: 1100px;
-            margin: auto;
-            padding: 70px 20px;
-        }
+  section {
+    margin-bottom: 56px;
+  }
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    color: #0b1c2d;
+    border-bottom: 2px solid #0b1c2d;
+    padding-bottom: 8px;
+  }
+  section p, section ul {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 12px;
+  }
+  section ul {
+    list-style: disc inside;
+  }
+  section ul li {
+    margin-bottom: 8px;
+  }
 
-        h2 {
-            font-size: 30px;
-            margin-bottom: 20px;
-            color: #0b1c2d;
-        }
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 32px 20px;
+    background: #0b1c2d;
+    color: #fff;
+    font-size: 0.875rem;
+    user-select: none;
+  }
 
-        .sub {
-            color: #555;
-            margin-bottom: 40px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            background: #fff;
-            padding: 25px;
-            border-radius: 6px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-
-        .image-box {
-            height: 220px;
-            background: #ddd;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-size: 14px;
-        }
-
-        footer {
-            background: #0b1c2d;
-            color: #fff;
-            text-align: center;
-            padding: 40px 20px;
-            font-size: 14px;
-        }
-    </style>
+  /* Responsive */
+  @media (max-width: 768px) {
+    nav.navbar {
+      padding: 0 24px;
+    }
+    nav.navbar ul {
+      gap: 18px;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+    main {
+      margin: 24px auto 56px;
+    }
+  }
+</style>
 </head>
-
 <body>
 
-<header>
-    <h1>Yulia Stepanovna Vorontsova</h1>
-    <p>International Business Leader · Logistics & Trade · Strategy & Growth</p>
-</header>
+<!-- Navbar -->
+<nav class="navbar" role="navigation" aria-label="Primary navigation">
+  <div class="name">Yulia A. Vorontsova</div>
+  <ul>
+    <li><a href="#role">Role</a></li>
+    <li><a href="#focus">Core Focus</a></li>
+    <li><a href="#responsibilities">Responsibilities</a></li>
+    <li><a href="#company">Company</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-<section>
-    <h2>Personal Profile</h2>
-    <p class="sub">
-        A poised, strategic, and globally experienced businesswoman with a background in international trade,
-        logistics operations, and cross-border investment.
-    </p>
-
-    <div class="grid">
-        <div class="card">
-            <strong>Age:</strong> 37<br>
-            <strong>Nationality:</strong> United States (Russian ancestry)<br>
-            <strong>Location:</strong> Greater Los Angeles Area<br>
-            <strong>Zodiac:</strong> Pisces
-        </div>
-
-        <div class="card">
-            <strong>Height:</strong> 170 cm / 5’7”<br>
-            <strong>Weight:</strong> 121 lbs<br>
-            <strong>Blood Type:</strong> A<br>
-            <strong>Religion:</strong> Eastern Orthodox Christianity
-        </div>
-
-        <div class="card">
-            <strong>Languages:</strong> English, Russian, Chinese<br>
-            <strong>Marital Status:</strong> Divorced<br>
-            <strong>Lucky Number:</strong> 16
-        </div>
-    </div>
+<!-- Hero -->
+<section class="hero" aria-label="Introduction">
+  <div>
+    <h1>Shareholder & Executive at BEST WAY GROUP INC</h1>
+    <p>Driving strategic growth and operational excellence in international logistics and cross-border trade.</p>
+  </div>
 </section>
 
-<section>
-    <h2>Education</h2>
-    <p class="sub">A solid academic foundation supporting international vision and execution.</p>
+<!-- Main content -->
+<main>
 
-    <div class="grid">
-        <div class="card">
-            <h3>University of Hong Kong</h3>
-            <p>MBA – Business Administration & Financial Economics</p>
-            <p>2005 – 2009</p>
-        </div>
+  <section id="role" tabindex="-1">
+    <h2>Daily Work Overview</h2>
+    <ul>
+      <li>Reviewing key performance indicators (KPIs) to optimize company operations</li>
+      <li>Leading cross-department meetings to align strategic objectives</li>
+      <li>Approving critical strategic decisions impacting growth and market expansion</li>
+    </ul>
+  </section>
 
-        <div class="card">
-            <h3>Sibelius Upper Secondary School</h3>
-            <p>Helsinki, Finland</p>
-            <p>2001 – 2005</p>
-        </div>
+  <section id="focus" tabindex="-1">
+    <h2>Core Focus Areas</h2>
+    <ul>
+      <li>Business Growth and Revenue Enhancement</li>
+      <li>Customer Satisfaction and Retention</li>
+      <li>Strategy Development and Innovation</li>
+    </ul>
+  </section>
 
-        <div class="card">
-            <h3>Early Education</h3>
-            <p>Primary & Middle School in Helsinki, Finland</p>
-        </div>
-    </div>
-</section>
+  <section id="responsibilities" tabindex="-1">
+    <h2>Key Responsibilities</h2>
+    <ul>
+      <li>Strategic planning and execution aligned with corporate vision</li>
+      <li>Team leadership and fostering a high-performance culture</li>
+      <li>Partner negotiations to secure competitive advantages</li>
+      <li>Performance optimization across all operational areas</li>
+    </ul>
+    <p><strong>Role Summary:</strong><br />
+      Serving as the company’s growth engine and chief problem solver, combining strategy, leadership, and resilience to drive sustainable success.</p>
+  </section>
 
-<section>
-    <h2>Career & Company</h2>
-    <p class="sub">
-        From entrepreneurship in international trade to leadership in U.S.–China logistics.
-    </p>
+  <section id="company" tabindex="-1">
+    <h2>Company Profile</h2>
+    <p><strong>BEST WAY GROUP INC</strong></p>
+    <p>343 N Baldwin Park Blvd, City of Industry, CA 91746</p>
+    <p>Website: <a href="http://www.bestwayltl.com/" target="_blank" rel="noopener noreferrer">www.bestwayltl.com</a></p>
+    <p><strong>Founder & Chairman:</strong> Xie Shaohua<br />
+    President of the Chinese General Chamber of Commerce of California</p>
+    <p>BEST WAY GROUP INC is an independent private international freight forwarding and 3PL company, specializing in China–U.S. logistics and cross-border e-commerce solutions.</p>
+  </section>
 
-    <div class="grid">
-        <div class="card">
-            <h3>BEST WAY GROUP INC</h3>
-            <p>
-                Shareholder & Executive Management<br>
-                China–U.S. Logistics · 3PL · Cross-Border E-commerce
-            </p>
-            <p>
-                Core responsibilities include strategy planning, growth execution,
-                KPI oversight, and partner negotiations.
-            </p>
-        </div>
+  <section id="contact" tabindex="-1">
+    <h2>Contact</h2>
+    <p>For inquiries regarding business operations and partnership opportunities, please reach out through official channels provided on the company website.</p>
+  </section>
 
-        <div class="card">
-            <div class="image-box">Logistics / Warehouse Image</div>
-        </div>
-    </div>
-</section>
+</main>
 
-<section>
-    <h2>Lifestyle & Interests</h2>
-    <p class="sub">A balanced life combining discipline, exploration, and reflection.</p>
-
-    <div class="grid">
-        <div class="card">
-            <div class="image-box">Scuba Diving Image</div>
-            <p>Scuba Diving – Similan Islands, Phuket</p>
-        </div>
-
-        <div class="card">
-            <div class="image-box">Yoga Image</div>
-            <p>Yoga – Mind & Body Balance</p>
-        </div>
-
-        <div class="card">
-            <div class="image-box">Hiking Image</div>
-            <p>Hiking – Yosemite National Park</p>
-        </div>
-    </div>
-</section>
-
-<section>
-    <h2>Charity & Values</h2>
-    <p class="sub">
-        Committed to giving back through education support, environmental protection,
-        and community welfare initiatives.
-    </p>
-
-    <div class="card">
-        I donate 10% of my profits to charitable organizations and actively participate
-        in community service programs in Los Angeles.
-    </div>
-</section>
-
-<footer>
-    © 2026 Yulia Vorontsova · All Rights Reserved
+<footer role="contentinfo">
+  © 2026 Yulia Vorontsova · All Rights Reserved
 </footer>
 
 </body>
