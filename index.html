@@ -120,36 +120,42 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
 }
   .feature-slider {
     position: relative;
-    display: flex;
-    align-items: center;
-    height: 300px; /* container height */
-    max-width: 1200px;
+    width: 100%;
+    height: 90vh; /* almost full screen height */
+    max-height: 1080px; /* optional max height */
     margin: 40px auto;
-    border: none;
-    border-radius: 12px;
     overflow: hidden;
+    border-radius: 12px;
 }
 
 .feature-slider .slides {
-    display: flex; /* horizontal layout */
-    flex-direction: row; /* horizontal */
-    gap: 15px; /* spacing between images */
+    display: flex;
+    width: 300%; /* 3 images side by side */
+    height: 100%;
+    transition: transform 1s ease-in-out;
 }
 
-.feature-slider .slides img {
-    width: 200px; /* bigger images */
-    height: 200px; /* square and visible */
-    object-fit: cover;
-    border-radius: 12px;
+.feature-slider .slide {
+    flex: 0 0 100%; /* each slide takes full container width */
+    height: 100%;
+}
+
+.feature-slider .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* scale image to fill container */
 }
 
 .feature-overlay {
-    margin-left: 20px; /* space between images and overlay */
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
     background-color: rgba(0,0,0,0.4);
-    padding: 25px 35px;
+    padding: 30px 40px;
     border-radius: 12px;
     color: white;
-    max-width: 700px;
+    max-width: 600px;
 }
 </style>
 </head>
@@ -286,6 +292,18 @@ function showSlides() {
 }
 
 showSlides();
+</script>
+    <script>
+let currentIndex = 0;
+const slidesContainer = document.querySelector('.feature-slider .slides');
+const totalSlides = document.querySelectorAll('.feature-slider .slide').length;
+
+function showNextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+setInterval(showNextSlide, 4000); // slide every 4 seconds
 </script>
 </body>
 </html>
