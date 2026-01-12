@@ -118,71 +118,44 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
     nav a:hover { color: #ffd600; }
     header { justify-content: space-between; padding: 18px 20px; }
 }
-   .feature-image {
+  .feature-slider {
     position: relative;
-    background-image: url('images/bestway.jpg'); /* your image */
-    background-size: cover;            /* fill the section */
-    background-position: top left;     /* focus on top-left corner */
-    height: 400px;                     /* adjust height as needed */
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 40px;
-
-    border: 2px solid #0a4da2;        /* blue border */
-    border-radius: 12px;               /* rounded corners */
-    overflow: hidden;                  /* keep image & overlay inside border */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12); /* soft shadow for depth */
-}
-
-.feature-overlay {
-    background-color: rgba(0,0,0,0.4); /* slightly transparent overlay */
-    padding: 40px 20px;
-    border-radius: 12px;               /* match the image border */
-    max-width: 900px;
-    text-align: center;
-}
-
-.feature-overlay h2 {
-    font-size: 36px;
-    margin-bottom: 16px;
-    color: #ffd600;
-}
-
-.feature-overlay p {
-    font-size: 18px;
-    line-height: 1.5;
-}
-    .feature-image {
-    position: relative;
-    background-image: url('images/bestway.jpg'); /* replace with your image file */
-    background-size: cover; /* cover the whole div */
-    background-position: center; /* center the image */
-    height: 400px; /* adjust height if needed */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 40px;
-}
-
-.feature-overlay {
-    background-color: rgba(0,0,0,0.5); /* dark overlay */
-    padding: 40px 20px;
+    height: 300px; /* smaller height so it’s not huge */
+    max-width: 1200px;
+    margin: 40px auto;
+    border: 2px solid #0a4da2;
     border-radius: 12px;
-    max-width: 900px;
-    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-.feature-overlay h2 {
-    font-size: 36px;
-    margin-bottom: 16px;
-    color: #ffd600; /* yellow */
+.feature-slider .slides {
+    display: flex;
+    flex-direction: column; /* stack images vertically */
+    gap: 5px;
+    width: auto;
+    flex-shrink: 0;
 }
 
-.feature-overlay p {
-    font-size: 18px;
-    line-height: 1.5;
+.feature-slider .slides img {
+    width: 200px; /* make images smaller */
+    height: 90px; /* uniform height */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.feature-overlay {
+    position: absolute;
+    left: 220px; /* push overlay to the right of the images */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.4);
+    padding: 20px 30px;
+    border-radius: 12px;
     color: white;
+    max-width: 900px;
 }
 </style>
 </head>
@@ -220,12 +193,17 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
 
 <!-- ABOUT -->
 <section id="about">
-    <div class="feature-image">
-        <div class="feature-overlay">
-            <h2>About BEST WAY GROUP INC</h2>
-            <p>BEST WAY GROUP INC is an independent private international freight forwarding and 3PL company, specializing in China–U.S. logistics and cross-border e-commerce solutions. Founded by Xie Shaohua, the company delivers reliable, compliant, and efficient logistics services to global clients.</p>
-        </div>
+  <div class="feature-slider">
+    <div class="slides">
+      <img src="images/bestway.jpg" alt="Bestway">
+      <img src="images/company.jpg" alt="Company 1">
+      <img src="images/company2.jpg" alt="Company 2">
     </div>
+    <div class="feature-overlay">
+      <h2>About BEST WAY GROUP INC</h2>
+      <p>BEST WAY GROUP INC is an independent private international freight forwarding and 3PL company, specializing in China–U.S. logistics and cross-border e-commerce solutions. Founded by Xie Shaohua, the company delivers reliable, compliant, and efficient logistics services to global clients.</p>
+    </div>
+  </div>
 </section>
 
 <!-- CAREER -->
@@ -300,6 +278,19 @@ hamburger.addEventListener('click', () => { nav.classList.toggle('show'); });
 const navLinks = document.querySelectorAll('nav a');
 navLinks.forEach(link => { link.addEventListener('click', () => { nav.classList.remove('show'); }); });
 </script>
+<script>
+let slideIndex = 0;
+const slides = document.querySelectorAll('.feature-slider .slides img');
 
+function showSlides() {
+    slides.forEach((img, i) => {
+        img.style.display = (i === slideIndex) ? 'block' : 'none';
+    });
+    slideIndex = (slideIndex + 1) % slides.length;
+    setTimeout(showSlides, 3000); // change image every 3 seconds
+}
+
+showSlides();
+</script>
 </body>
 </html>
