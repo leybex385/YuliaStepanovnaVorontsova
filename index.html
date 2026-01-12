@@ -383,6 +383,92 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
         max-width: 80%;
     }
 }
+    /* ===== CAREER SECTION ===== */
+.career-section {
+    background-color: #f5f7fa; /* subtle light-gray background */
+    border-radius: 18px;
+    padding: 60px 50px;
+    margin: 60px auto;
+}
+
+.career-split {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.career-content {
+    flex: 1;
+    min-width: 320px;
+}
+
+.career-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #0a4da2;
+    margin-bottom: 16px;
+}
+
+.career-intro, .career-summary {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 24px;
+}
+
+.highlight {
+    color: #0a4da2;
+    font-weight: 600;
+}
+
+.career-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 24px;
+}
+
+.career-list li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.career-list i {
+    color: #ffd600; /* gold icon */
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+/* IMAGE */
+.career-image {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    justify-content: center;
+}
+
+.career-image img {
+    max-width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .career-split {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .career-image {
+        margin-top: 30px;
+    }
+}
 </style>
 </head>
 <body>
@@ -450,39 +536,30 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
 </section>
 
 <!-- CAREER -->
-<section id="career">
+<section id="career" class="career-section">
   <div class="career-split">
     <div class="career-content">
       <h2 class="section-title">Professional Role</h2>
-      <p><strong>Shareholder & Active Management Participant</strong></p>
+      <p class="career-title"><strong>Shareholder & Executive, BEST WAY GROUP INC</strong></p>
 
-      <h3>Daily Work Overview</h3>
-      <ul>
-          <li>Reviewing KPIs</li>
-          <li>Holding cross-department meetings</li>
-          <li>Approving strategic decisions</li>
+      <p class="career-intro">
+        Yulia Stepanovna Vorontsova provides <span class="highlight">strategic leadership</span> and executive oversight for BEST WAY GROUP INC (Sino‑US Logistics Group). She drives <span class="highlight">operational excellence</span>, spearheads <span class="highlight">growth initiatives</span>, and ensures seamless, <span class="highlight">compliant logistics solutions</span> across international supply chains.
+      </p>
+
+      <h3>Core Responsibilities</h3>
+      <ul class="career-list">
+          <li><i class="fas fa-chart-line"></i> Formulating and executing <span class="highlight">corporate strategy</span> to accelerate growth.</li>
+          <li><i class="fas fa-users"></i> Leading <span class="highlight">cross-functional teams</span> to optimize operations and performance.</li>
+          <li><i class="fas fa-chart-pie"></i> Overseeing <span class="highlight">financial planning</span>, KPIs, and operational metrics.</li>
+          <li><i class="fas fa-handshake"></i> Managing <span class="highlight">key client relationships</span> and strategic partnerships.</li>
+          <li><i class="fas fa-lightbulb"></i> Innovating processes to improve <span class="highlight">efficiency</span>, <span class="highlight">compliance</span>, and <span class="highlight">customer satisfaction</span>.</li>
       </ul>
 
-      <h3>Core Focus</h3>
-      <ul>
-          <li>Growth & Revenue</li>
-          <li>Customer Satisfaction & Retention</li>
-          <li>Strategy & Innovation</li>
-      </ul>
-
-      <h3>Key Responsibilities</h3>
-      <ul>
-          <li>Strategic planning</li>
-          <li>Team leadership</li>
-          <li>Partner negotiations</li>
-          <li>Performance optimization</li>
-      </ul>
-
-      <h3>Role Summary</h3>
-      <p>
-        Yulia Stepanovna Vorontsova acts as the company’s growth engine and strategic problem solver—driving BEST WAY GROUP INC forward with leadership, vision, and operational excellence.
+      <p class="career-summary">
+        As a hands-on executive, Yulia combines <span class="highlight">strategic vision</span> with <span class="highlight">operational expertise</span>, ensuring BEST WAY GROUP INC remains a leading Sino‑US logistics and 3PL provider.
       </p>
     </div>
+
     <div class="career-image">
       <img src="images/owner2.jpg" alt="Yulia Stepanovna Vorontsova">
     </div>
