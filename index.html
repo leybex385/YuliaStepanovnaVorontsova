@@ -141,6 +141,52 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
     color: white;
     max-width: 800px;
 }
+    .grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 250px minimum per card */
+    gap: 28px;
+    margin-top: 30px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    padding-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    transition: transform 0.5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    margin-top: 10px;
+    font-weight: 600;
+    color: #0a4da2;
+    font-size: 20px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #333;
+    padding: 0 12px 12px;
+}
 </style>
 </head>
 <body>
@@ -185,7 +231,26 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
     </div>
   </div>
 </section>
-
+<section id="features">
+  <h2 class="section-title">Our Key Services</h2>
+  <div class="grid-cards">
+    <div class="card">
+      <img src="images/logi.jpg" alt="Service 1">
+      <h3>International Freight Forwarding</h3>
+      <p>Reliable shipping solutions between China and the U.S., optimized for speed and compliance.</p>
+    </div>
+    <div class="card">
+      <img src="images/logi2.jpg" alt="Service 2">
+      <h3>3PL Solutions</h3>
+      <p>End-to-end logistics services to simplify inventory, fulfillment, and distribution.</p>
+    </div>
+    <div class="card">
+      <img src="images/logi3.jpg" alt="Service 3">
+      <h3>Cross-Border E-Commerce</h3>
+      <p>Specialized strategies for online businesses to expand globally with precision.</p>
+    </div>
+  </div>
+</section>
 
 <!-- CAREER -->
 <section id="career">
