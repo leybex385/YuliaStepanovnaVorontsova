@@ -469,6 +469,30 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
         margin-top: 30px;
     }
 }
+    /* CAREER LIST ALIGNMENT FIX */
+.career-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 24px;
+}
+
+.career-list li {
+    display: flex;
+    align-items: flex-start; /* ensure icon and text align at top */ 
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.career-list li i {
+    margin-top: 4px; /* align icon slightly with the text's first line */
+    flex-shrink: 0;
+    color: #0a4da2; /* consistent brand color for icons */
+    font-size: 20px;
+}
+
+.career-list li span {
+    flex: 1; /* ensure text flows naturally */
+}
 </style>
 </head>
 <body>
