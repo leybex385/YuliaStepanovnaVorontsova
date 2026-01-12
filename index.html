@@ -45,19 +45,19 @@ nav a:hover::after { width: 100%; left: 0; background: #ffd600; }
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 100vh; /* full screen height */
+    height: 50vh; /* half screen height */
+    min-height: 400px; /* optional: ensure it doesn't get too small on very short screens */
     background-color: #000;
     overflow: hidden;
 }
 
 .hero-video {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 1200px; /* limit the video width */
-    height: auto;
-    transform: translate(-50%, -50%);
+    height: 100%;
+    object-fit: cover;
     z-index: -1; /* behind text */
 }
 
