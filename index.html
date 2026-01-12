@@ -38,50 +38,79 @@ nav a { color: white; margin-left: 30px; text-decoration: none; font-weight: 500
 nav a::after { content: ''; position: absolute; width: 0; height: 2px; display: block; margin-top: 5px; right: 0; background: #ffd600; transition: width 0.3s ease; }
 nav a:hover::after { width: 100%; left: 0; background: #ffd600; }
 
-/* HERO SECTION */
-.hero {
-    position: relative;
+/* SPLIT HERO SECTION */
+.hero-split {
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100vh; /* full viewport height */
-    min-height: 500px;
-    overflow: hidden;
-    background-color: #000;
-}
-
-.hero-image {
-    position: absolute;
-    top: 0;
-    left: 0;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 80px 50px;
     width: 100%;
-    height: 100%;
-    background-image: url('images/owner.jpg'); /* use your owner's image */
-    background-size: cover; /* fill the section */
-    background-position: center center; /* center the image */
-    filter: brightness(0.65); /* dark overlay for text readability */
-    z-index: -1;
+    min-height: 80vh; /* tall enough for above the fold */
+    background-color: #fafafa;
 }
 
-.hero-text {
-    position: relative;
-    max-width: 900px;
-    padding: 0 20px;
-    color: #fff;
+.hero-content {
+    flex: 1;
+    max-width: 600px;
 }
 
-.hero-text h1 {
-    font-size: 48px;
+.hero-content h1 {
+    font-size: 58px;
     font-weight: 700;
-    margin-bottom: 20px;
+    color: #0a4da2;
+    margin-bottom: 16px;
 }
 
-.hero-text p {
-    font-size: 20px;
-    line-height: 1.5;
+.hero-subtitle {
+    font-size: 24px;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 12px;
 }
 
+.hero-description {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 8px;
+}
+
+.hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image-container img {
+    width: 100%;
+    max-width: 450px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-split {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .hero-image-container {
+        margin-top: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-content .hero-description {
+        font-size: 16px;
+    }
+}
 /* SECTIONS */
 section { padding: 80px 50px; max-width: 1200px; margin: auto; scroll-margin-top: 100px; }
 h2.section-title { font-size: 32px; color: #0a4da2; margin-bottom: 28px; font-weight: 700; }
@@ -211,17 +240,19 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
         <span></span>
     </div>
 </header>
-
 <!-- HERO SECTION -->
-<!-- HERO SECTION -->
-<section class="hero">
-  <!-- Hero Image Background -->
-  <div class="hero-image"></div>
-
-  <!-- Text Overlay -->
-  <div class="hero-text">
-    <h1>Global Logistics & Cross-Border Solutions</h1>
-    <p>BEST WAY GROUP INC is a leading Sino-US logistics and 3PL company, optimizing international freight and e-commerce supply chains with strategy, compliance, and precision.</p>
+<section class="hero-split">
+  <div class="hero-content">
+    <h1>Xie Shaohua</h1>
+    <p class="hero-subtitle">Founder & Visionary Leader</p>
+    <p class="hero-description">
+      BEST WAY GROUP INC is a leading Sino‑US logistics and 3PL company,
+      optimizing international freight and e‑commerce supply chains
+      with strategy, compliance, and precision.
+    </p>
+  </div>
+  <div class="hero-image-container">
+    <img src="images/owner.jpg" alt="Owner Portrait">
   </div>
 </section>
 
