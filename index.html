@@ -469,29 +469,31 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
         margin-top: 30px;
     }
 }
-    /* CAREER LIST ALIGNMENT FIX */
+   /* ===== CLEAN CAREER LIST (FINAL) ===== */
 .career-list {
     list-style: none;
     padding: 0;
-    margin-bottom: 24px;
+    margin-top: 16px;
 }
 
 .career-list li {
     display: flex;
-    align-items: flex-start; /* ensure icon and text align at top */ 
-    gap: 12px;
+    align-items: flex-start;
+    gap: 14px;
     margin-bottom: 16px;
 }
 
 .career-list li i {
-    margin-top: 4px; /* align icon slightly with the text's first line */
-    flex-shrink: 0;
-    color: #0a4da2; /* consistent brand color for icons */
     font-size: 20px;
+    color: #0a4da2;
+    margin-top: 4px;
+    flex-shrink: 0;
 }
 
 .career-list li span {
-    flex: 1; /* ensure text flows naturally */
+    flex: 1;
+    line-height: 1.6;
+    color: #333;
 }
 </style>
 </head>
@@ -571,13 +573,28 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
       </p>
 
       <h3>Core Responsibilities</h3>
-      <ul class="career-list">
-          <li><i class="fas fa-chart-line"></i> Formulating and executing <span class="highlight">corporate strategy</span> to accelerate growth.</li>
-          <li><i class="fas fa-users"></i> Leading <span class="highlight">cross-functional teams</span> to optimize operations and performance.</li>
-          <li><i class="fas fa-chart-pie"></i> Overseeing <span class="highlight">financial planning</span>, KPIs, and operational metrics.</li>
-          <li><i class="fas fa-handshake"></i> Managing <span class="highlight">key client relationships</span> and strategic partnerships.</li>
-          <li><i class="fas fa-lightbulb"></i> Innovating processes to improve <span class="highlight">efficiency</span>, <span class="highlight">compliance</span>, and <span class="highlight">customer satisfaction</span>.</li>
-      </ul>
+<ul class="career-list">
+  <li>
+    <i class="fas fa-chart-line"></i>
+    <span>Formulating and executing <span class="highlight">corporate strategy</span> to accelerate growth.</span>
+  </li>
+  <li>
+    <i class="fas fa-users"></i>
+    <span>Leading <span class="highlight">cross-functional teams</span> to optimize operations and performance.</span>
+  </li>
+  <li>
+    <i class="fas fa-chart-pie"></i>
+    <span>Overseeing <span class="highlight">financial planning</span>, KPIs, and operational metrics.</span>
+  </li>
+  <li>
+    <i class="fas fa-handshake"></i>
+    <span>Managing <span class="highlight">key client relationships</span> and strategic partnerships.</span>
+  </li>
+  <li>
+    <i class="fas fa-lightbulb"></i>
+    <span>Innovating processes to improve <span class="highlight">efficiency</span>, <span class="highlight">compliance</span>, and <span class="highlight">customer satisfaction</span>.</span>
+  </li>
+</ul>
 
       <p class="career-summary">
         As a hands-on executive, Yulia combines <span class="highlight">strategic vision</span> with <span class="highlight">operational expertise</span>, ensuring BEST WAY GROUP INC remains a leading Sino‑US logistics and 3PL provider.
