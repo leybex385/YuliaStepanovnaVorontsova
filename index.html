@@ -122,40 +122,34 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
     position: relative;
     display: flex;
     align-items: center;
-    height: 400px; /* taller so images are bigger */
+    height: 300px; /* container height */
     max-width: 1200px;
     margin: 40px auto;
-    border: none; /* removed the border */
+    border: none;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12); /* optional: soft shadow */
 }
 
 .feature-slider .slides {
-    display: flex;
-    flex-direction: column; /* stack images vertically */
-    gap: 10px; /* a bit more spacing between images */
-    width: auto;
-    flex-shrink: 0;
+    display: flex; /* horizontal layout */
+    flex-direction: row; /* horizontal */
+    gap: 15px; /* spacing between images */
 }
 
 .feature-slider .slides img {
-    width: 250px; /* bigger images */
-    height: 150px; /* taller */
+    width: 200px; /* bigger images */
+    height: 200px; /* square and visible */
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 12px;
 }
 
 .feature-overlay {
-    position: absolute;
-    left: 270px; /* move overlay right so bigger images fit */
-    top: 50%;
-    transform: translateY(-50%);
+    margin-left: 20px; /* space between images and overlay */
     background-color: rgba(0,0,0,0.4);
     padding: 25px 35px;
     border-radius: 12px;
     color: white;
-    max-width: 850px;
+    max-width: 700px;
 }
 </style>
 </head>
@@ -205,6 +199,7 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
     </div>
   </div>
 </section>
+
 
 <!-- CAREER -->
 <section id="career">
