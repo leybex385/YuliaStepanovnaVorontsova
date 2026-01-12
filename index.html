@@ -507,6 +507,49 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
     color: #0a4da2;
     margin: 32px 0 16px;
 }
+    /* EDUCATION SECTION: VIDEO BACKGROUND */
+.education-video-section {
+    position: relative;
+    overflow: hidden;
+    padding: 120px 50px; /* spacing similar to other sections */
+    margin-top: 60px;
+    min-height: 400px; /* ensure visible area of video */
+}
+
+.education-bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;              /* preserve landscape ratio */
+    object-fit: contain;       /* DO NOT crop */
+    transform: translate(-50%, -50%);
+    background-color: #000;    /* fill empty space if needed */
+}
+    z-index: -1; /* behind content */
+    pointer-events: none; /* don’t interfere with scrolling/text */
+}
+
+.education-content {
+    position: relative;
+    z-index: 1; /* above the video */
+    max-width: 1200px;
+    margin: auto;
+    color: #fff; /* white text for contrast */
+    background-color: rgba(0, 0, 0, 0.35); /* slight dark overlay */
+    padding: 40px 30px;
+    border-radius: 12px;
+}
+
+.education-content h2.section-title {
+    color: #ffd600; /* match your branding */
+    margin-bottom: 24px;
+}
+
+.education-content .timeline .timeline-item h4,
+.education-content .timeline .timeline-item p {
+    color: #fff;
+}
 </style>
 </head>
 <body>
@@ -619,15 +662,24 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
   </div>
 </section>
 
-<!-- EDUCATION -->
-<section id="education">
+<!-- EDUCATION with Video Background -->
+<section id="education" class="education-video-section">
+  <!-- Video Background -->
+  <video class="education-bg-video" autoplay muted loop playsinline>
+      <source src="videos/uni.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+  </video>
+
+  <!-- Text Overlay -->
+  <div class="education-content">
     <h2 class="section-title">Education</h2>
     <div class="timeline">
-        <div class="timeline-item">
-            <h4>University of Hong Kong (MBA in Business Administration & Financial Economics)</h4>
-            <p>2005 - 2009 | Pok Fu Lam, Hong Kong</p>
-        </div>
+      <div class="timeline-item">
+        <h4>University of Hong Kong (MBA in Business Administration & Financial Economics)</h4>
+        <p>2005 - 2009 | Pok Fu Lam, Hong Kong</p>
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- COMPANY INFO -->
