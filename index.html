@@ -112,6 +112,61 @@
     margin-bottom: 8px;
   }
 
+  /* Education Timeline */
+  .timeline {
+    position: relative;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 3px solid #0b1c2d;
+  }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+  }
+  .timeline-item:last-child {
+    margin-bottom: 0;
+  }
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 4px;
+    width: 18px;
+    height: 18px;
+    background: #0b1c2d;
+    border-radius: 50%;
+    border: 3px solid #f8f9fa;
+  }
+  .timeline-date {
+    font-weight: 600;
+    color: #0b1c2d;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+  }
+  .timeline-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0b1c2d;
+  }
+  .timeline-subtitle {
+    font-style: italic;
+    color: #555;
+    margin-top: 4px;
+  }
+  .timeline-description {
+    margin-top: 8px;
+    color: #444;
+    font-size: 0.95rem;
+  }
+  .timeline-link a {
+    color: #0b1c2d;
+    text-decoration: underline;
+  }
+  .timeline-link a:hover,
+  .timeline-link a:focus {
+    color: #1a73e8;
+  }
+
   /* Footer */
   footer {
     text-align: center;
@@ -136,6 +191,16 @@
     main {
       margin: 24px auto 56px;
     }
+    .timeline {
+      margin-left: 10px;
+      padding-left: 15px;
+    }
+    .timeline-item::before {
+      left: -9px;
+      width: 14px;
+      height: 14px;
+      border-width: 2px;
+    }
   }
 </style>
 </head>
@@ -149,6 +214,7 @@
     <li><a href="#focus">Core Focus</a></li>
     <li><a href="#responsibilities">Responsibilities</a></li>
     <li><a href="#company">Company</a></li>
+    <li><a href="#education">Education</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -202,6 +268,23 @@
     <p><strong>Founder & Chairman:</strong> Xie Shaohua<br />
     President of the Chinese General Chamber of Commerce of California</p>
     <p>BEST WAY GROUP INC is an independent private international freight forwarding and 3PL company, specializing in China–U.S. logistics and cross-border e-commerce solutions.</p>
+  </section>
+
+  <!-- Education Timeline Section -->
+  <section id="education" tabindex="-1">
+    <h2>Education</h2>
+    <div class="timeline" aria-label="Education timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">2005 – 2009</div>
+        <div class="timeline-title">University of Hong Kong</div>
+        <div class="timeline-subtitle">MBA in Business Administration and Financial Economics</div>
+        <div class="timeline-description">
+          Studied Business Administration with a focus on Financial Economics.  
+          Location: Pok Fu Lam, Hong Kong.  
+          Email system: <a href="https://mail.office365.com/connect.hku.hk" target="_blank" rel="noopener noreferrer">Office 365 Portal</a>.
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="contact" tabindex="-1">
