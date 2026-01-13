@@ -1053,6 +1053,61 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
 
 .prev-slide { left: 10px; }
 .next-slide { right: 10px; }
+/* ROLE SECTION */
+.role-section {
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+
+.role-section .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.role-section .role-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.role-section .role-image img {
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.role-section .role-text h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #1a1a1a;
+}
+
+.role-section .role-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.role-section .role-details {
+  list-style: none;
+  padding: 0;
+}
+
+.role-section .role-details li {
+  font-size: 15px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.role-section .role-details li::before {
+  content: "✔";
+  color: #007bff;
+  font-weight: bold;
+}
 
 </style>
 </head>
@@ -1227,12 +1282,28 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
 
 <div class="section-divider"></div>
 
-<!-- ROLE AT BEST WAY GROUP (duplicate of Career?) -->
-<section id="role">
-  <h2 class="section-title">Role at BEST WAY GROUP</h2>
-  <p>
-    Yulia Stepanovna Vorontsova leads strategic initiatives, oversees operational excellence, and ensures compliance and efficiency across the company’s logistics operations. She drives innovation, builds client relationships, and empowers cross-functional teams.
-  </p>
+<!-- ROLE AT BEST WAY GROUP -->
+<section id="role" class="role-section">
+  <div class="container">
+    <h2 class="section-title">Role at BEST WAY GROUP</h2>
+    <div class="role-content">
+      <div class="role-image">
+        <img src="images/founder.png" alt="Yulia Stepanovna Vorontsova">
+      </div>
+      <div class="role-text">
+        <h3>Founder & Chairman</h3>
+        <p>
+          Yulia Stepanovna Vorontsova leads BEST WAY GROUP INC with a focus on innovation, efficiency, 
+          and global logistics solutions. Her vision drives the company’s strategic growth and commitment to excellence.
+        </p>
+        <ul class="role-details">
+          <li><strong>Founded:</strong> 2005</li>
+          <li><strong>Location:</strong> New York, USA</li>
+          <li><strong>Employees:</strong> 500+</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
 
 <div class="section-divider"></div>
