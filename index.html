@@ -180,29 +180,33 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
     nav a:hover { color: #ffd600; }
     header { justify-content: space-between; padding: 18px 20px; }
 }
-  .feature-image {
+.feature-image {
     display: flex;
-    align-items: flex-start; /* align image to top */
-    gap: 20px; /* space between image and text */
-    max-width: 1200px;
-    margin: 40px auto;
+    flex-wrap: wrap;       /* allow stacking on smaller screens */
+    align-items: center;   /* vertically align text and image */
+    gap: 40px;             /* more space between text and image */
+    max-width: 1400px;     /* wider container */
+    margin: 60px auto;     /* more top/bottom spacing */
 }
 
 .feature-image .single-image {
-    width: 300px; /* smaller size */
+    width: 100%;          /* take up full width of flex column */
+    max-width: 600px;     /* optional max width */
     height: auto;
-    border-radius: 12px; /* slightly rounded edges */
+    border-radius: 18px;
     object-fit: cover;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15); /* optional shadow like other images */
 }
 
 .feature-overlay {
-    flex: 1; /* text takes remaining space */
+    flex: 1;
     background-color: rgba(0,0,0,0.4);
-    padding: 25px 35px;
+    padding: 40px 50px;
     border-radius: 12px;
     color: white;
-    max-width: 800px;
+    max-width: 900px;
 }
+
     .grid-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 250px minimum per card */
