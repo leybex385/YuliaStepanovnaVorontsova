@@ -935,7 +935,70 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
     color: #333;
     line-height: 1.6;
 }
+.insights-slider {
+  position: relative;
+  overflow: hidden;
+  max-width: 1000px;
+  margin: 30px auto;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
 
+.slide {
+  display: none;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 80%;
+}
+
+.slide-caption h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: #ffd600;
+}
+
+.slide-caption p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.prev-slide, .next-slide {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(10,77,162,0.8);
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  padding: 12px 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.prev-slide { left: 10px; }
+.next-slide { right: 10px; }
+
+.prev-slide:hover, .next-slide:hover {
+  background: #ffd600;
+  color: #0a4da2;
+}
 </style>
 </head>
 <body>
@@ -1085,18 +1148,26 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
 <!-- INSIGHTS / THOUGHT LEADERSHIP (NEW) -->
 <section id="insights">
   <h2 class="section-title">Insights & Thought Leadership</h2>
-  <div class="grid-cards">
-    <div class="card">
-      <img src="images/insight1.jpg" alt="Insight 1">
+  <div class="insights-slider">
+  <div class="slide">
+    <img src="images/insight1.jpg" alt="Insight 1">
+    <div class="slide-caption">
       <h3>Future of Sino-US Logistics</h3>
       <p>Analysis of emerging trends and challenges in international freight forwarding.</p>
     </div>
-    <div class="card">
-      <img src="images/insight2.jpg" alt="Insight 2">
+  </div>
+  <div class="slide">
+    <img src="images/insight2.jpg" alt="Insight 2">
+    <div class="slide-caption">
       <h3>3PL Innovations for E-Commerce</h3>
       <p>Exploring innovative solutions to optimize global e-commerce logistics.</p>
     </div>
   </div>
+
+  <!-- Navigation arrows -->
+  <button class="prev-slide">&#10094;</button>
+  <button class="next-slide">&#10095;</button>
+</div>
 </section>
 
 <div class="section-divider"></div>
@@ -1214,6 +1285,35 @@ function showSlides() {
 
 showSlides();
 </script>
+<script>
+let slideIndex = 0;
+const slides = document.querySelectorAll('.insights-slider .slide');
+const prevBtn = document.querySelector('.prev-slide');
+const nextBtn = document.querySelector('.next-slide');
 
+function showSlide(index) {
+  slides.forEach((slide, i) => slide.style.display = (i === index) ? 'block' : 'none');
+}
+
+function nextSlide() {
+  slideIndex = (slideIndex + 1) % slides.length;
+  showSlide(slideIndex);
+}
+
+function prevSlideFunc() {
+  slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+  showSlide(slideIndex);
+}
+
+// Initial display
+showSlide(slideIndex);
+
+// Button events
+nextBtn.addEventListener('click', nextSlide);
+prevBtn.addEventListener('click', prevSlideFunc);
+
+// Auto-slide every 5 seconds
+setInterval(nextSlide, 5000);
+</script>
 </body>
 </html>
