@@ -853,6 +853,46 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
     background: linear-gradient(to right, #0a4da2, #ffd600); /* professional brand gradient */
     border-radius: 2px;              /* rounded edges */
 }
+.about-card {
+    display: flex;
+    align-items: flex-start; /* align image and text at the top */
+    gap: 30px; /* space between image and text */
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 30px;
+    border: 2px solid #0a4da2; /* professional blue outline */
+    border-radius: 20px; /* rounded corners */
+    box-shadow: 0 12px 35px rgba(0,0,0,0.12); /* subtle shadow */
+    background-color: #ffffff; /* white background for contrast */
+}
+
+/* Make the image slightly larger inside the card */
+.about-card .single-image {
+    width: 400px;
+    height: auto;
+    border-radius: 15px;
+    border: 2px solid #ffd600; /* optional inner outline for the image */
+}
+
+/* Adjust text overlay inside the card */
+.about-card .feature-overlay {
+    flex: 1;
+    padding: 20px;
+    background-color: transparent; /* remove dark overlay if card already has border */
+    color: #333; /* dark text for readability */
+}
+@media (max-width: 1024px) {
+    .about-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .about-card .single-image {
+        width: 80%;
+        margin: auto;
+    }
+}
 
 </style>
 </head>
@@ -941,11 +981,13 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
 
 <!-- ABOUT ME (unchanged) -->
 <section id="about">
-  <div class="feature-image">
-    <img src="images/bestway2.jpg" alt="Bestway" class="single-image">
-    <div class="feature-overlay">
-      <h2>About BEST WAY GROUP INC</h2>
-      <p>BEST WAY GROUP INC is an independent private international freight forwarding and 3PL company, specializing in China–U.S. logistics and cross-border e-commerce solutions. Founded by Xie Shaohua, the company delivers reliable, compliant, and efficient logistics services to global clients.</p>
+  <div class="about-card">
+    <div class="feature-image">
+        <img src="images/bestway2.jpg" alt="Bestway" class="single-image">
+        <div class="feature-overlay">
+          <h2>About BEST WAY GROUP INC</h2>
+          <p>BEST WAY GROUP INC is an independent private international freight forwarding...</p>
+        </div>
     </div>
   </div>
 </section>
