@@ -689,6 +689,42 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
         align-items: center;
     }
 }
+    /* COMPANY INFO - PROFESSIONAL LOOK */
+#company {
+    background-color: #f5f7fa; /* subtle light background */
+    padding: 60px 50px;
+    border-radius: 16px;
+    max-width: 900px;
+    margin: 60px auto;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+#company .company-info-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+#company .company-icon {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+#company strong {
+    color: #0a4da2; /* professional dark blue */
+}
+
+#company a {
+    color: #0a4da2;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#company a:hover {
+    color: #ffd600;
+}
 </style>
 </head>
 <body>
@@ -825,33 +861,30 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
 </section>
 
 <!-- COMPANY INFO -->
-<section id="company" class="company-section">
-  <h2 class="section-title">Company Information</h2>
-  <div class="company-cards">
-    <div class="company-card">
-      <i class="fas fa-user-tie"></i>
-      <div class="company-details">
-        <h3>Founder & Chairman</h3>
-        <p>Xie Shaohua</p>
-      </div>
-    </div>
-    <div class="company-card">
-      <i class="fas fa-map-marker-alt"></i>
-      <div class="company-details">
-        <h3>Address</h3>
-        <p>343 N Baldwin Park Blvd, City of Industry, CA 91746</p>
-      </div>
-    </div>
-    <div class="company-card">
-      <i class="fas fa-globe"></i>
-      <div class="company-details">
-        <h3>Website</h3>
-        <p><a href="http://www.bestwayltl.com" target="_blank">bestwayltl.com</a></p>
-      </div>
-    </div>
-  </div>
-</section>
+<section id="company">
+    <h2 class="section-title">Company Information</h2>
 
+    <div class="company-info-item">
+        <img src="images/founder.png" alt="Founder & Chairman" class="company-icon">
+        <div>
+            <strong>Founder & Chairman:</strong> Xie Shaohua
+        </div>
+    </div>
+
+    <div class="company-info-item">
+        <img src="images/address.png" alt="Address" class="company-icon">
+        <div>
+            <strong>Address:</strong> 343 N Baldwin Park Blvd, City of Industry, CA 91746
+        </div>
+    </div>
+
+    <div class="company-info-item">
+        <img src="images/bestway.jpg" alt="Website" class="company-icon">
+        <div>
+            <strong>Website:</strong> <a href="http://www.bestwayltl.com" target="_blank">bestwayltl.com</a>
+        </div>
+    </div>
+</section>
 <!-- CONTACT -->
 <section id="contact">
     <h2 class="section-title">Contact</h2>
