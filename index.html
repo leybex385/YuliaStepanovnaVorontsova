@@ -1272,48 +1272,30 @@ const navLinks = document.querySelectorAll('nav a');
 navLinks.forEach(link => { link.addEventListener('click', () => { nav.classList.remove('show'); }); });
 </script>
 <script>
-let slideIndex = 0;
-const slides = document.querySelectorAll('.feature-slider .slides img');
-
-function showSlides() {
-    slides.forEach((img, i) => {
-        img.style.display = (i === slideIndex) ? 'block' : 'none';
-    });
-    slideIndex = (slideIndex + 1) % slides.length;
-    setTimeout(showSlides, 3000); // change image every 3 seconds
-}
-
-showSlides();
-</script>
 <script>
-let slideIndex = 0;
-const slides = document.querySelectorAll('.insights-slider .slide');
-const prevBtn = document.querySelector('.prev-slide');
-const nextBtn = document.querySelector('.next-slide');
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('.insights-slider .slide');
+  const prevBtn = document.querySelector('.prev-slide');
+  const nextBtn = document.querySelector('.next-slide');
 
-function showSlide(index) {
-  slides.forEach((slide, i) => slide.style.display = (i === index) ? 'block' : 'none');
-}
+  function showSlide(index) {
+      slides.forEach((slide, i) => slide.style.display = (i === index) ? 'block' : 'none');
+  }
+  function nextSlide() {
+      slideIndex = (slideIndex + 1) % slides.length;
+      showSlide(slideIndex);
+  }
+  function prevSlideFunc() {
+      slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+      showSlide(slideIndex);
+  }
 
-function nextSlide() {
-  slideIndex = (slideIndex + 1) % slides.length;
+  // Initial
   showSlide(slideIndex);
-}
 
-function prevSlideFunc() {
-  slideIndex = (slideIndex - 1 + slides.length) % slides.length;
-  showSlide(slideIndex);
-}
-
-// Initial display
-showSlide(slideIndex);
-
-// Button events
-nextBtn.addEventListener('click', nextSlide);
-prevBtn.addEventListener('click', prevSlideFunc);
-
-// Auto-slide every 5 seconds
-setInterval(nextSlide, 5000);
+  prevBtn?.addEventListener('click', prevSlideFunc);
+  nextBtn?.addEventListener('click', nextSlide);
+  setInterval(nextSlide, 5000);
 </script>
 </body>
 </html>
