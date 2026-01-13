@@ -1204,6 +1204,18 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
   color: #007bff;
   font-weight: bold;
 }
+    .contact-map{
+  margin-top:12px;
+  border-radius:8px;
+  overflow:hidden;
+}
+
+.contact-map iframe{
+  width:100%;
+  height:160px;
+  border:0;
+}
+
 
 </style>
 </head>
@@ -1491,46 +1503,56 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
   <h2 class="section-title">Contact</h2>
 
   <div class="contact-container">
-    <!-- Contact Details -->
-<div class="contact-details">
 
-  <div class="contact-item">
-    <div>
-      <h4>Email</h4>
-      <p>
-        <a href="mailto:yuliastepanovna888@gmail.com">
-          yuliastepanovna888@gmail.com
-        </a>
-      </p>
+    <!-- LEFT: CONTACT DETAILS -->
+    <div class="contact-details">
+
+      <div class="contact-item">
+        <div>
+          <h4>Email</h4>
+          <p>
+            <a href="mailto:yuliastepanovna888@gmail.com">
+              yuliastepanovna888@gmail.com
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div>
+          <h4>Phone</h4>
+          <p>
+            <a href="tel:+12134769913">
+              +1 (213) 476-9913
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div>
+          <h4>Office Address</h4>
+          <p>
+            343 N Baldwin Park Blvd<br>
+            City of Industry, CA 91746<br>
+            United States
+          </p>
+
+          <!-- Google Map: directly under address -->
+          <div class="contact-map">
+            <iframe
+              src="https://www.google.com/maps?q=343%20N%20Baldwin%20Park%20Blvd,%20City%20of%20Industry,%20CA%2091746&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+        </div>
+      </div>
+
     </div>
-  </div>
 
-  <div class="contact-item">
-    <div>
-      <h4>Phone</h4>
-      <p>
-        <a href="tel:+12134769913">
-          +1 (213) 476-9913
-        </a>
-      </p>
-    </div>
-  </div>
-
-  <div class="contact-item">
-    <div>
-      <h4>Office Address</h4>
-      <p>
-        343 N Baldwin Park Blvd<br>
-        City of Industry, CA 91746<br>
-        United States
-      </p>
-    </div>
-  </div>
-
-</div>
-
-
-    <!-- Contact Form -->
+    <!-- RIGHT: CONTACT FORM -->
     <form class="contact-form">
       <div class="form-group">
         <label for="name">Name</label>
@@ -1549,25 +1571,10 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
 
       <button type="submit" class="btn-submit">Send Message</button>
     </form>
-<div class="contact-address">
-  <p class="address-text">
-    1234 Medical Parkway, Suite 600<br>
-    Dallas, TX 75201<br>
-    United States
-  </p>
 
-  <div class="contact-map">
-    <iframe
-      src="https://www.google.com/maps?q=343%20N%20Baldwin%20Park%20Blvd,%20City%20of%20Industry,%20CA%2091746&output=embed"
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
   </div>
-</div>
-
-
-
 </section>
+
 
 <footer>
     © 2026 BEST WAY GROUP INC. All Rights Reserved.
