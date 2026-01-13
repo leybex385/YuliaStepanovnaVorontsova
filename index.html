@@ -725,6 +725,123 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
 #company a:hover {
     color: #ffd600;
 }
+    /* ===== CONTACT SECTION ===== */
+.contact-section {
+    background-color: #f7f9fc;
+    padding: 80px 50px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    margin: 60px auto;
+    max-width: 1200px;
+}
+
+.contact-container {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Contact Details */
+.contact-details {
+    flex: 1;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.contact-icon {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+}
+
+.contact-item h4 {
+    font-size: 20px;
+    color: #0a4da2;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.contact-item p {
+    font-size: 16px;
+    color: #333;
+}
+
+.contact-item a {
+    color: #0a4da2;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-item a:hover {
+    color: #ffd600;
+}
+
+/* Contact Form */
+.contact-form {
+    flex: 1;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #ccd3da;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    transition: border 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #0a4da2;
+    outline: none;
+}
+
+.btn-submit {
+    background-color: #0a4da2;
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 12px;
+}
+
+.btn-submit:hover {
+    background-color: #ffd600;
+    color: #0a4da2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}
 </style>
 </head>
 <body>
@@ -886,9 +1003,57 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
     </div>
 </section>
 <!-- CONTACT -->
-<section id="contact">
-    <h2 class="section-title">Contact</h2>
-    <p>Email, phone, or inquiry form goes here.</p>
+<section id="contact" class="contact-section">
+  <h2 class="section-title">Contact</h2>
+
+  <div class="contact-container">
+    <!-- Contact Details -->
+    <div class="contact-details">
+      <div class="contact-item">
+        <img src="images/email.png" alt="Email Icon" class="contact-icon">
+        <div>
+          <h4>Email</h4>
+          <p><a href="mailto:info@bestwayltl.com">info@bestwayltl.com</a></p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <img src="images/phone.png" alt="Phone Icon" class="contact-icon">
+        <div>
+          <h4>Phone</h4>
+          <p><a href="tel:+1234567890">+1 (234) 567‑890</a></p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <img src="images/location.png" alt="Location Icon" class="contact-icon">
+        <div>
+          <h4>Location</h4>
+          <p>City of Industry, CA, USA</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <form class="contact-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your Name">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Your Email">
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" rows="6" placeholder="Your Message"></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">Send Message</button>
+    </form>
+  </div>
 </section>
 
 <footer>
