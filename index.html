@@ -70,6 +70,25 @@ nav a { color: white; margin-left: 30px; text-decoration: none; font-weight: 500
 nav a::after { content: ''; position: absolute; width: 0; height: 2px; display: block; margin-top: 5px; right: 0; background: #ffd600; transition: width 0.3s ease; }
 nav a:hover::after { width: 100%; left: 0; background: #ffd600; }
 
+.footer-address{
+  max-width:360px;
+  font-size:14px;
+  line-height:1.6;
+}
+
+.footer-map{
+  margin-top:12px;
+  border-radius:8px;
+  overflow:hidden;
+}
+
+.footer-map iframe{
+  width:100%;
+  height:160px;   
+  border:0;
+}
+
+    
 /* SPLIT HERO SECTION */
 .hero-split {
     display: flex;
@@ -1491,18 +1510,22 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
 
       <button type="submit" class="btn-submit">Send Message</button>
     </form>
+<div class="footer-address">
+  <p>
+    <strong>Dallas Office</strong><br>
+    1234 Medical Parkway, Suite 600<br>
+    Dallas, TX 75201, United States
+  </p>
+
+  <div class="footer-map">
+    <iframe
+      src="https://www.google.com/maps?q=343%20N%20Baldwin%20Park%20Blvd,%20City%20of%20Industry,%20CA%2091746&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
   </div>
-    <div style="margin-top:50px; border-radius:16px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.1);">
-  <iframe
-    src="https://www.google.com/maps?q=343%20N%20Baldwin%20Park%20Blvd,%20City%20of%20Industry,%20CA%2091746&output=embed"
-    width="100%"
-    height="420"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
 </div>
+
 
 </section>
 
