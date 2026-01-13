@@ -999,6 +999,61 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
   background: #ffd600;
   color: #0a4da2;
 }
+    /* INSIGHTS SLIDER */
+.insights-slider {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slide {
+  display: none; /* hide all slides initially */
+  position: relative;
+  text-align: center;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  padding: 10px 15px;
+  border-radius: 5px;
+  max-width: 80%;
+  text-align: left;
+}
+
+.prev-slide, .next-slide {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -20px;
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+  border: none;
+  background: rgba(0,0,0,0.5);
+  border-radius: 50%;
+  user-select: none;
+  transition: 0.3s;
+}
+
+.prev-slide:hover, .next-slide:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.prev-slide { left: 10px; }
+.next-slide { right: 10px; }
+
 </style>
 </head>
 <body>
@@ -1271,7 +1326,7 @@ hamburger.addEventListener('click', () => { nav.classList.toggle('show'); });
 const navLinks = document.querySelectorAll('nav a');
 navLinks.forEach(link => { link.addEventListener('click', () => { nav.classList.remove('show'); }); });
 </script>
-<script>
+
 <script>
   let slideIndex = 0;
   const slides = document.querySelectorAll('.insights-slider .slide');
@@ -1281,21 +1336,27 @@ navLinks.forEach(link => { link.addEventListener('click', () => { nav.classList.
   function showSlide(index) {
       slides.forEach((slide, i) => slide.style.display = (i === index) ? 'block' : 'none');
   }
+
   function nextSlide() {
       slideIndex = (slideIndex + 1) % slides.length;
       showSlide(slideIndex);
   }
+
   function prevSlideFunc() {
       slideIndex = (slideIndex - 1 + slides.length) % slides.length;
       showSlide(slideIndex);
   }
 
-  // Initial
+  // Initial display
   showSlide(slideIndex);
 
-  prevBtn?.addEventListener('click', prevSlideFunc);
-  nextBtn?.addEventListener('click', nextSlide);
+  // Event listeners
+  prevBtn.addEventListener('click', prevSlideFunc);
+  nextBtn.addEventListener('click', nextSlide);
+
+  // Optional: Auto-slide every 5 seconds
   setInterval(nextSlide, 5000);
+
 </script>
 </body>
 </html>
