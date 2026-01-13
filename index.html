@@ -88,6 +88,24 @@ nav a:hover::after { width: 100%; left: 0; background: #ffd600; }
   border:0;
 }
 
+    .site-footer{
+  background-color:#0a4da2;
+  padding:28px 20px;
+}
+
+.footer-inner{
+  max-width:1200px;
+  margin:0 auto;
+  text-align:center;
+  font-size:13px;
+  letter-spacing:0.4px;
+  color:rgba(255,255,255,0.75);
+}
+
+.footer-divider{
+  margin:0 8px;
+}
+
     
 /* SPLIT HERO SECTION */
 .hero-split {
@@ -1612,9 +1630,14 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
 </section>
 
 
-<footer>
-    © 2026 BEST WAY GROUP INC. All Rights Reserved.
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© 2026 BEST WAY GROUP INC.</span>
+    <span class="footer-divider">·</span>
+    <span>All rights reserved</span>
+  </div>
 </footer>
+
 
 <script>
 const sections = document.querySelectorAll('section');
