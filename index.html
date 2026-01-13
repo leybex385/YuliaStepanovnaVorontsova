@@ -329,6 +329,40 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
     color: #333; /* dark gray for visibility */
     margin-bottom: 20px;
 }
+   .feedback-card{
+  padding:32px 24px;
+  border-left:1px solid rgba(255,255,255,0.08);
+}
+
+.feedback-image{
+  margin-bottom:18px;
+}
+
+.feedback-image img{
+  width:100%;
+  max-height:180px;
+  object-fit:cover;
+  border-radius:8px;
+  opacity:0.9;
+}
+
+.feedback-text{
+  font-size:15px;
+  line-height:1.7;
+  color:#cfd6df;
+}
+
+.feedback-author{
+  margin-top:18px;
+  font-size:14px;
+  color:#9aa4b2;
+}
+
+.feedback-author strong{
+  color:#e6ecf2;
+  font-weight:500;
+}
+ 
 
 .hero-description {
     font-size: 20px;
@@ -1376,20 +1410,10 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
 
 <ul class="role-details">
   <li><strong>Shareholding Since:</strong> 2005</li>
-  <li><strong>Headquartered:</strong> New York, USA</li>
+  <li><strong>Headquartered:</strong> California, USA</li>
   <li><strong>Organization Size:</strong> 300+ Employees</li>
 </ul>
 </div>
-
-        <ul class="role-details">
-          <li><strong>Shareholding Since:</strong> 2005</li>
-          <li><strong>Location:</strong> New York, USA</li>
-          <li><strong>Employees:</strong> 500+</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <div class="section-divider"></div>
@@ -1401,44 +1425,59 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
 
   <div class="grid-cards">
 
-<div class="card">
-  <p>
-    “When we first began working with Yulia, our cross-border logistics operations were burdened by inefficient processes, limited transparency, and compliance challenges. These issues resulted in elevated costs and inconsistent delivery timelines.
+<div class="feedback-card">
+  <div class="feedback-image">
+    <img src="partner1.jpg" alt="Partner Feedback">
+  </div>
+
+  <p class="feedback-text">
+    “When we first began working with Yulia, our cross-border logistics operations faced inefficiencies, compliance complexity, and rising operational costs.
     <br><br>
-    Yulia quickly restructured our operational workflows, integrated fragmented stages of the supply chain, and introduced automation and digital systems that significantly improved efficiency. She also implemented intelligent compliance management frameworks to ensure alignment with global regulatory requirements, substantially reducing compliance-related risk.
+    Yulia restructured our workflows, integrated fragmented supply chain processes, and introduced disciplined compliance frameworks aligned with global regulatory standards.
     <br><br>
-    Through data-driven analysis and predictive planning, she optimized scheduling and risk management, improving delivery reliability while lowering overall costs. Her strategic perspective and meticulous execution transformed our supply chain into a more agile, resilient system capable of supporting long-term growth.”
+    Her data-driven approach significantly improved delivery reliability, reduced risk exposure, and lowered overall operational costs, transforming our logistics operations into a more resilient and scalable system.”
   </p>
-  <h3>Operations Director</h3>
-  <p style="font-size:14px; color:#666;">
+
+  <div class="feedback-author">
+    <strong>Operations Director</strong><br>
     Medical Distribution Group · China–U.S. Supply Chain
-  </p>
+  </div>
 </div>
 
 
-<div class="card">
-  <p>
+<div class="feedback-card">
+  <div class="feedback-image">
+    <img src="partner2.jpg" alt="Partner Feedback">
+  </div>
+
+  <p class="feedback-text">
     “In navigating complex logistics decisions, Yulia consistently demonstrates exceptional clarity and judgment. Her strength lies not in speed, but in precision — knowing exactly when decisive action is required and when patience yields better outcomes.
     <br><br>
     Her strategic insight and disciplined decision-making approach enabled us to respond to challenges with confidence, avoid unnecessary exposure, and select the most effective course of action at critical moments.”
   </p>
-  <h3>Managing Partner</h3>
-  <p style="font-size:14px; color:#666;">
+
+  <div class="feedback-author">
+    <strong>Managing Partner</strong><br>
     Healthcare Investment & Logistics Advisory
-  </p>
+  </div>
 </div>
 
 
-<div class="card">
-  <p>
+<div class="feedback-card">
+  <div class="feedback-image">
+    <img src="partner3.jpg" alt="Partner Feedback">
+  </div>
+
+  <p class="feedback-text">
     “Working with Yulia felt less like engaging an external consultant and more like gaining a long-term strategic partner. She has an exceptional ability to identify complex and potentially costly issues early in the process, helping us avoid operational missteps that could have led to significant consequences later on.
     <br><br>
     Her forward-looking perspective and deep understanding of the logistics industry consistently guided us toward sound decisions, ensuring the company’s stability and sustainable development during pivotal periods.”
   </p>
-  <h3>Founder</h3>
-  <p style="font-size:14px; color:#666;">
+
+  <div class="feedback-author">
+    <strong>Founder</strong><br>
     Regional Third-Party Logistics & Freight Forwarding Company
-  </p>
+  </div>
 </div>
 
 
@@ -1510,14 +1549,14 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
 
       <button type="submit" class="btn-submit">Send Message</button>
     </form>
-<div class="footer-address">
-  <p>
-    <strong>Dallas Office</strong><br>
+<div class="contact-address">
+  <p class="address-text">
     1234 Medical Parkway, Suite 600<br>
-    Dallas, TX 75201, United States
+    Dallas, TX 75201<br>
+    United States
   </p>
 
-  <div class="footer-map">
+  <div class="contact-map">
     <iframe
       src="https://www.google.com/maps?q=343%20N%20Baldwin%20Park%20Blvd,%20City%20of%20Industry,%20CA%2091746&output=embed"
       loading="lazy"
@@ -1525,6 +1564,7 @@ footer { background-color: #0a4da2; color: white; text-align: center; padding: 2
     </iframe>
   </div>
 </div>
+
 
 
 </section>
